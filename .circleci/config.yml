@@ -32,8 +32,11 @@ jobs:
           name: Remove old src file
           command: rm -r src
       - run:
-          name: Git add and commit
-          command: git add . && git commit -m :poop: Circle CI
+          name: Git-add-tmr
+          command: git add .
+      - run:
+          name: Git-commit-tmr
+          command: git commit -m ":poop: Circle CI"
       - run:
           name: Pushing
           command: git push origin gh-pages

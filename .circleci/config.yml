@@ -42,5 +42,5 @@ jobs:
           command: git commit -m "Circle CI"
       - run:
           name: Pushing
-          command: git push -f origin gh-pages
+          command: GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" git push -f origin gh-pages
  

@@ -11,4 +11,7 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
-
+      - run:
+          name: Listing directory
+          command: pwd && ls -lah
+     

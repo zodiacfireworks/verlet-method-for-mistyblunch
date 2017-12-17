@@ -20,5 +20,21 @@ jobs:
           name: Installing Dependencies
           command: dnf install git -y 
       - run:
-          name: Automatic deploy
-          command: git checkout -b gh-pages && rm -r README.md .circleci && mv src/* . && rm -r src && git add . && git commit -m ":trollface: Deploy from Circle CI" && git push -f origin gh-pages && echo "Ojala funcione :("
+          name: Checkout to gh-pages
+          command: git checkout -b gh-pages
+      - run:
+          name: Remove README and .circleci
+          command: rm -r README.md .circleci
+      - run:
+          name: Extract src content
+          command: mv src/* .
+      - run:
+          name: Remove old src file
+          command: rm -r src
+      - run:
+          name: Git add and commit
+          command: git add . && git commit -m ":poop: Circle CI"
+      - run:
+          name: Pushing
+          command: git push origin gh-pages
+ 

@@ -36,8 +36,8 @@ jobs:
           command: git add .
       - run:
           name: Git-commit-tmr
-          command: git commit -m ":poop: Circle CI"
+          command: git commit -m "Circle CI"
       - run:
           name: Pushing
-          command: git push origin gh-pages
+          command: git push -f origin gh-pages
  

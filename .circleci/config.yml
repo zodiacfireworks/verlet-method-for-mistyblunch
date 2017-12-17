@@ -17,5 +17,8 @@ jobs:
           name: Listing directory
           command: pwd && ls -lah
       - run:
+          name: Installing Dependencies
+          command: dnf install git -y 
+      - run:
           name: Automatic deploy
           command: git checkout -b gh-pages && git branch

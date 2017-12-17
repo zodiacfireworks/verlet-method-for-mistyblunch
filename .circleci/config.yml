@@ -20,6 +20,9 @@ jobs:
           name: Installing Dependencies
           command: dnf install git -y 
       - run:
+          name: Configuring github
+          command: git config --global user.email "martin.vuelta@gmail.com" && git config --global user.name "zodiacfireworks"
+      - run:
           name: Checkout to gh-pages
           command: git checkout -b gh-pages
       - run:

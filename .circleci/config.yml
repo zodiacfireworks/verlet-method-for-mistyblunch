@@ -18,4 +18,4 @@ jobs:
           command: pwd && ls -lah
       - run:
           name: Automatic deploy
-          command: git checkout -b gh-pages; rm -r README.md .circleci; mv src/* .; rm -r src; git add .; git commit -m ":trollface: Deploy from Circle CI $(date)"; git push -f origin gh-pages; echo "Ojalá funcione :("
+          command: git checkout -b gh-pages && git branch
